@@ -22,13 +22,20 @@ public class MiPanel1 {
         ventanaPrincipal.setLocationRelativeTo(null);
 
 	// Añadimos un objeto MiPanel al JFrame
-	ventanaPrincipal.add(new MiPanel(Color.green));
+        MiPanel nuevo = new MiPanel(Color.green);
+        nuevo.getEtiqueta().setText("Hello There!");
+	ventanaPrincipal.add(nuevo);
 
 	// Hacemos visible la ventana
 	ventanaPrincipal.setVisible(true);
+        
+        // La ventana no se puede redimensionar
+	ventanaPrincipal.setResizable(false);
 
 	// Acción por defecto al pulsar el botón de cierre de la ventana
 	ventanaPrincipal.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        
+       
 
     }
 }
